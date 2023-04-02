@@ -1,0 +1,48 @@
+$white-fontNormal: #ffffff;
+$light: #e5e5e5;
+$red: #e60c0d;
+$dark-BG: #161616;
+$black: #000000;
+$grey: #5b5b5b;
+$yellow-titulo: #ffe81f;
+$darkTransparent: rgba(22, 22, 22, 0.7);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $dark-BG;
+  color: $white-fontNormal;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+
+  .logo {
+    margin-right: 12px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .titulo {
+    font-family: Bakbak one;
+    color: $yellow-titulo;
+  }
+}
+
+section {
+  display: flex;
+
+  .filmeCard {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+  }
+}

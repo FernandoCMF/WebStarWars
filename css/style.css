@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161616;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+header .logo {
+  margin-right: 12px;
+  width: 48px;
+  height: 48px;
+}
+header .titulo {
+  font-family: Bakbak one;
+  color: #ffe81f;
+}
+
+section {
+  display: flex;
+}
+section .filmeCard {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
