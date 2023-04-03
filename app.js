@@ -1,15 +1,21 @@
 window.onload = function () {
-  fetch('https://swapi.dev/api/films')
-    .then(async (response) => {
-      response.json();
-    })
-    .then((data) => {
-      // Para cada item do objeto JavaScript, cria um elemento HTML e adiciona-o à lista
-      data.forEach((item) => {
-        const li = document.createElement('li');
-        li.textContent = item.title;
-        lista.appendChild(li);
-      });
-    })
-    .catch((error) => console.error(error));
+  async function fetchAPI(url) {
+    const response = await fetch(url);
+    const jsonBody = await response.json();
+    return jsonBody;
+  }
+
+  const resquisicao = fetchAPI('https://swapi.dev/api/films');
+
+  resquisicao.then((response) => {
+    let filmesLista = document.querySelector('#filmes-lista');
+    console.log(response.results.title);
+
+    response.map((item) => {
+      const lista = document.createElement('li');
+
+      lista.innerHTML = item.results.title;
+      filmesLista.appendChild(lista);
+    });
+  });
 };
