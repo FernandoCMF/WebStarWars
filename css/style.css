@@ -25,14 +25,87 @@ header .titulo {
   color: #ffe81f;
 }
 
-section {
+.conteudoFilmes {
   display: flex;
+  height: 90vh;
+  padding: 10px 10px 0px 10px;
 }
-section .filmeCard {
+.conteudoFilmes .filmesLista {
   display: flex;
-  width: 200px;
-  height: 200px;
-  background-color: red;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  width: 100%;
+}
+.conteudoFilmes .filmesLista .cardFilme {
+  text-align: center;
+  font-family: Bakbak one;
+  position: relative;
+  margin: 8px;
+  width: 220px;
+  height: 320px;
+  background: #e60c0d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.conteudoFilmes .filmesLista .cardFilme::before,
+.conteudoFilmes .filmesLista .cardFilme::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #c6eeff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.conteudoFilmes .filmesLista .cardFilme::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+.conteudoFilmes .filmesLista .cardFilme::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100% 0 15px;
+}
+.conteudoFilmes .filmesLista .cardFilme:hover::before,
+.conteudoFilmes .filmesLista .cardFilme:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.conteudoFilmes .filmesLista .cardFilme:hover:after {
+  content: "Deu certo";
+  color: #161616;
+  background-image: url("https://media0.giphy.com/media/3ornjPteRwwUdSWifC/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

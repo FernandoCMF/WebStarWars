@@ -8,14 +8,20 @@ window.onload = function () {
   const resquisicao = fetchAPI('https://swapi.dev/api/films');
 
   resquisicao.then((response) => {
-    let filmesLista = document.querySelector('#filmes-lista');
-    console.log(response.results.title);
+    console.log(response.results);
+    const filmesLista = document.getElementById('filmes-lista');
 
-    response.map((item) => {
-      const lista = document.createElement('li');
+    response.results.map((data) => {
+      const createLi = document.createElement('li');
+      const createCard = document.createElement('div');
 
-      lista.innerHTML = item.results.title;
-      filmesLista.appendChild(lista);
+      createLi.innerHTML = data.title;
+      createLi.setAttribute('class', 'filmesLista');
+
+      createCard.setAttribute('class', 'cardFilme');
+
+      createCard.appendChild(createLi);
+      filmesLista.appendChild(createCard);
     });
   });
 };
