@@ -13,4 +13,4 @@ Projeto criado com o objetivo de aprender mais do JavaScript
 
 
 ## Screenshots
-<img src="./video-2.gif" width="50%">
+<img src="./video-2.gif" width="80%" height="100%">
